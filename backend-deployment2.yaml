@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend2
+spec:
+  selector:
+    matchLabels:
+      app: hello2
+      tier: backend2
+      track: stable
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hello2
+        tier: backend2
+        track: stable
+    spec:
+      containers:
+        - name: hello2
+          image: "tutum/hello-world:latest"
+          ports:
+            - name: http
+              containerPort: 80
