@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: example-ingress2
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-by-header: "test"
     nginx.ingress.kubernetes.io/canary-by-header-value: "jayanie"
