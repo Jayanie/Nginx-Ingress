@@ -7,11 +7,13 @@ spec:
   selector:
     matchLabels:
       deployment: hello
-  replicas: 3
+      # app: deployment1     
+  replicas: 1
   template:
     metadata:
       labels:
         deployment: hello
+        # app: deployment1
     spec:
       containers:
         - name: hello
